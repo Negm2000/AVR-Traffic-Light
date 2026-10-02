@@ -4,7 +4,7 @@ Traffic light with a pedestrian button on an ATmega32, in C without Arduino. Pro
 
 ![The circuit running in SimulIDE: pedestrian LEDs on top, car LEDs below](docs/simulation.gif)
 
-The firmware in `Build/firmware.hex` running in SimulIDE on a simulated ATmega32 at 8 MHz, one full 20-second cycle. The circuit file is `sim/Traffic_Light_Sim.simu`; the push button on PD2 is the pedestrian request.
+The firmware in `Build/firmware.hex` running in SimulIDE on a simulated ATmega32 at 8 MHz. Cars start on green. The pedestrian button on PD2 is pressed two seconds in, so the lights go to blinking yellow straight away instead of waiting out the 5 seconds, then pedestrians get green. The circuit file is `sim/Traffic_Light_Sim.simu`.
 
 ![State diagram: four states stepped every 5 seconds, with the pedestrian button skipping ahead](docs/states.svg)
 
